@@ -48,11 +48,8 @@ int main()
         }
 
         //prompt player to choose a space
-        std::cout << "\nPlayer " << player << ": choose what space to replace.";
-        do
-        {
-          std::getline(std::cin, replace);
-        } while (sizeof((char)replace[0]) != sizeof(char));
+        std::cout << "\nPlayer " << player << ": choose what space to replace.";        
+        std::getline(std::cin, replace);      
         //checks to see if the space is taken or not, if not replaces it
         Replacer(TTTArray, player, replace);
         //when returns, space available subtracts one
